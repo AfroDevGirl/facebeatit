@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{! Document Settings }}
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatabile" content="IE=edge,chrome=1" />
+
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="decription" content="{{meta_description}}" />
+
+	{{! Styles}}
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/style.css"}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/layout.css"}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/partials.css"}}" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="{{asset "/css/media.css"}}" />
+
+	{{! Scripts }}
+	<script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+	<script type='text/javascript' src="{{asset "/js/responsive_iframes.js"}}"></script>
+	<script type="text/javascript" src="{{asset "/js/featured-author.js"}}"></script>
+	<script type="text/javascript" src="{{asset "/js/pagination.js"}}"></script>
+	<script type="text/javascript" src="{{asset "/js/custom-tag.js"}}"></script>
+
+	{{! Responsive Meta Tags }}
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	{{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	{{> header}}
+	<div class="wrapper_fbi">
+	{{{body}}}
+	</div>
+	{{#is "home"}}
+		<footer class="footer_fbi">
+			{{> copyright}}
+		</footer>
+	{{/is}}
+	{{ghost_foot}}
+	<script language="javascript" type="text/javascript">
+	responsive_iframes();
+	</script>
+</body>
+</html>

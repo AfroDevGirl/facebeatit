@@ -1,0 +1,15 @@
+<div class="staff-list-wrapper_fbi">
+{{#get "users" limit="all" include="count.posts" order="count.posts desc"}}
+	<ul class="staff-list_fbi">
+		{{#foreach users limit="6"}}
+			<li class="staff-list-item_fbi">
+				<div class="author-card_fbi">
+					<img class="author-card-image_fbi" src="{{image}}"/>
+					<h4 class="author-card-name_fbi">{{name}}</h4>
+					<a href="{{url}}"><div class="button">Read more</div></a>
+				</div>
+			</li>
+		{{/foreach}}
+	</ul>
+{{/get}}
+</div>

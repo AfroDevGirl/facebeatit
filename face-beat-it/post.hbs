@@ -1,0 +1,62 @@
+{{!< default }}
+
+<main class="main_fbi" role="main">
+	{{#post}}
+	<header class="page-header_fbi">
+		<h1 class="page-title_fbi" itemprop="headline">{{title}}</h1>
+	</header>
+	<div class="article_fbi" role="article" itemscope itemType="http://schema.org/Article">
+		{{#if image}}
+			<img src="{{image}}" alt="{{title}}"/>
+		{{/if}}
+		<time class="date_fbi" datetime="{{date format="YYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+		<div class="post-content_fbi" itemprop="articleBody">
+			{{content}}
+		</div>
+		{{#if tags}}
+			<ul class="loop-tags_fbi">
+				{{#foreach tags}}
+				
+					<a href="{{url}}" title="{{name}}" class="tag_fbi"><li >{{name}}</li> </a>
+					
+				{{/foreach}}
+			</ul>
+		{{/if}}
+		<div class="share-post_fbi">
+			<h4 class="share_fbi">Share this post: 
+			<a class="share_fbi" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+			<a class="share_fbi" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
+			<a class="share_fbi" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i></a>
+			</h4>
+		</div>
+		{{^has tag="Video"}}
+		{{#author}}
+		<footer class="post-footer_fbi">
+			<a href="{{url}}">
+			<address itemscope itemtype="http://schema.org/Person">
+				{{#if image}}
+					<div class="author-image_fbi"><img src="{{image}}" itemprop="image" style="border-radius: 50%;"/></div>
+				{{/if}}
+				<div class="author-meta_fbi">
+					<h4 class="author-name_fbi"><span itemprop="author">{{name}}</span></h4>
+					{{#if website}}
+						<div class="author-website_fbi"><a href="{{website}}" itemprop="url">{{website}}</a></div>
+					{{/if}}
+					<div class="author-bio_fbi">
+						<p>{{bio}}</p>
+					</div>
+				</div>
+			</address>
+			</a>
+		</footer>
+		{{/author}}
+		{{/has}}
+	</div>
+	{{/post}}
+	{{#if pagination}}
+		<div class="pagination_fbi">
+			{{{pagination}}}
+		</div>
+	{{/if}}
+</main>
+{{> sidebar}}

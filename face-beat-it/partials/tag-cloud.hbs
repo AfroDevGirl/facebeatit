@@ -1,0 +1,10 @@
+<div class="sidebar-widget_fbi">
+<h4 class="sidebar-title_fbi">Popular Tags</h4>
+{{#get "tags" limit="25" include="count.posts" order="count.posts desc"}}
+    <ul class="tag-cloud-list_fbi">
+      {{#foreach tags}}
+          <a href="/tag/{{slug}}" class="tag_fbi"><li>{{name}}</li></a>
+      {{/foreach}}
+    </ul>
+{{/get}}
+</div>

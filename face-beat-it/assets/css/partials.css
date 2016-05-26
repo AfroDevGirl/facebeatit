@@ -1,0 +1,239 @@
+/*HEADER 
+--------------------------------------------*/
+.logo_fbi{
+	float: left;
+	width: 60%;
+}
+.header_fbi .blog-title_fbi {
+	margin: 0;
+	color: #A3C4D9;
+}
+.header_fbi a{
+	color: #A3C4D9;
+	text-decoration: none;
+}
+.header_fbi .blog-description_fbi{
+
+}
+
+/* NAVIGATION
+--------------------------------------------*/
+.navigation_fbi li{
+	display: inline-block;
+}
+
+.nav-link_fbi{
+	padding: 10px 20px;
+	border: 3px solid #5687A6;
+	border-radius: 50px;
+	display: inline-block;
+	font-size: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 10px;
+	font-weight: 600;
+}
+.nav-link_fbi:hover{
+	background-color: #5687A6;
+	color: #fff;
+}
+.nav-link_fbi a:hover{
+	color: #fff;
+}
+/* LOOP 
+--------------------------------------------*/
+.loop_fbi{
+	background-color: #fff;
+	margin-bottom: 5%;
+	-webkit-box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.25);
+    overflow: hidden;
+    margin-top: 0;
+    padding: 10px;
+}
+.loop-header_fbi{
+	width: 55%;
+	display: inline-block;
+	float: right;
+}
+.date_fbi{}
+.loop-title_fbi{
+	padding: 0 1%;
+}
+.loop-image_fbi{
+	width: 40%;
+	margin: 10px 10px 0 10px;
+}
+.loop-content_fbi{
+	display: inline-block;
+	float: right;
+	width: 55%;
+}
+.loop-tags_fbi{
+	width: 100%;
+	text-align: right;
+	margin-top: 3%;
+}
+
+
+/* TAG CLOUD
+--------------------------------------------*/
+.tag_fbi{
+	text-transform: uppercase;
+	color: #fff;
+}
+.tag-cloud-list_fbi li, 
+.loop-tags_fbi li {
+	border-radius: 50px;
+	background-color: #264F73;
+	margin: 1%;
+	text-align: center;
+	display: inline-block;
+	padding: 1% 2%;
+}
+.tag-cloud-list_fbi a.tag_fbi, 
+.loop-tags_fbi a.tag_fbi {
+	color: #fff;
+}
+.tag-cloud-list_fbi li:hover, 
+.loop-tags_fbi li:hover {
+	-webkit-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.25);
+    background-color: #fff;
+    color: #264F73;
+}
+a.tag_fbi:hover{
+	color: #264F73;
+}
+/* FEATURED AUTHOR
+--------------------------------------------*/
+
+.featured-author-wrapper_fbi{
+	width: 80%;
+	margin: 0 auto;
+}
+
+#featured-author-image{
+	border-radius: 50%;
+	max-width: 8em;
+	max-height: 8em; 
+	float: left;
+	display: inline-block;
+	vertical-align: center;
+}
+.featured-author-meta_fbi{
+	float: right;
+	display: inline-block;
+	width: 50%;
+}
+#featured-author-name{
+	margin-top: 0;
+}
+
+/* FEATURED POST
+--------------------------------------------*/
+
+.featured-post-wrapper_fbi{
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* SOCIAL MEDIA
+--------------------------------------------*/
+.social-media-link_fbi{
+	display: block;
+	background: transparent !important;
+	color: inherit;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.social-media-title_fbi{
+	display: inline-block;
+}
+/* PAGINATION 
+--------------------------------------------*/
+.pagination_fbi{
+	display: inline-block;
+	width: 100%;
+	margin: 0 auto;
+	background: #fff;
+}
+.pagination-wrapper_fbi{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+.pages_fbi,
+#next-pages, 
+#prev-pages{
+	display: none;
+}
+.pagination-link_fbi{
+	font-size: 20px;
+	background-color: #0D0D0D;
+	padding: 1%;
+	color: #fff !important;
+}
+.pagination-link-current_fbi{
+	font-size: 20px;
+	background-color: #5687A6;
+	padding: 1%;
+	color: #fff !important;
+}
+/* COPYRIGHT
+--------------------------------------------*/
+.copyright_fbi{
+	font-size: 14px;
+	text-align: center;
+}
+/* SIDEBAR 
+--------------------------------------------*/
+.sidebar-widget_fbi{
+	width: 100%;
+	display: inline-block;
+	background-color: #fff;
+    margin-bottom: 5%;
+}
+.sidebar-title_fbi, 
+#custom-tag-header_fbi{
+	border-bottom: 1px solid black;
+	margin: 3% 1%;
+	padding: 0 5%;
+}
+.sidebar-wrapper_fbi{
+	width: 80%;
+	margin: 0 auto;
+}
+/* STAFF-LIST
+---------------------------------------------*/
+.staff-list-wrapper_fbi{
+	background-color: #5687A6;
+	margin-bottom: 1%;
+}
+.staff-list-item_fbi{
+	width: 15%;
+	margin: 0.5%;
+}
+
+
+#custom-tag-list_fbi{
+	width: 100%;
+}
+.custom-tag-list-item-odd_fbi{
+	width: 100%;
+	background-color: #A3C4D9;
+}
+.custom-tag-list-item-even_fbi{
+	width: 100%;
+	background-color: #5687A6;
+}
+.custom-tag-title_fbi{
+	width: 100%;
+	margin: 4% 6%;
+	overflow: hidden;
+}
+.custom-tag-title_fbi a{
+	color: #fff;
+}

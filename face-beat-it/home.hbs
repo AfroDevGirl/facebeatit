@@ -1,0 +1,32 @@
+{{!< default}}
+
+<div class="home_fbi">
+	<ul class="home-list_fbi">
+	{{#foreach posts limit="4"}}	
+		<li class="home-post_fbi">	
+			{{#if image}}
+				<image class="home-post-image_fbi" src="{{image}}" />
+			{{else}}
+				<image class="home-post-image_fbi" src="/assets/images/default_post.jpg" />
+			{{/if}}
+			<div class="caption_fbi">
+				<h2 class="caption-title_fbi"><a href="{{url}}" style="color:#fff;">{{title}}</a></h2>
+				<p class="caption-author_fbi">By {{author}}</p>
+			</div>
+		</li>
+	{{/foreach}}
+	</ul>
+	{{> staff-list}}
+	<ul class="homes-widget-list_fbi">	
+		<li class="home-widget_fbi">
+			{{> custom-tag}}				
+		</li>
+		<li class="home-widget_fbi" style="margin:0 4.5%;">
+			{{> tag-cloud}}
+		</li>
+		<li class="home-widget_fbi" style="float:right;margin:0;">
+			{{> social-media}}
+		</li>
+	</ul>
+</div>
+{{! footer}}

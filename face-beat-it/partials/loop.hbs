@@ -1,0 +1,39 @@
+{{#foreach posts}}
+	<article class="loop_fbi" role="article" itemscope itemtype="http://schema.org/Article">
+		<header class="loop-header_fbi">
+			<h2 class="loop-title_fbi" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h2>
+			<time class="date_fbi" datetime="{{date format="YYY-MM-DD"}}" itemprop="datePublished">Posted on {{date format='dddd DD MMM YYYY'}} by {{author}}</time>
+		</header>
+		{{#has tag="Video"}}
+			
+			<div class="loop-image_fbi">
+				{{content words="50"}}
+			</div>
+		{{else}}
+			<div class="loop-content_fbi" itemprop="articleBody">
+				{{excerpt characters="140"}}...
+				
+			</div>
+			{{^if image}}
+				<div class="loop-image_fbi">
+					<img src="/assets/images/default_post.jpg" alt="{{title}}" />
+				</div>
+			{{else}}
+				<div class="loop-image_fbi">
+					<img src="{{image}}" alt="{{title}}" />
+				</div>
+			{{/if}}
+		{{/has}}
+		{{#if tags}}
+	
+			<ul class="loop-tags_fbi">
+				{{#foreach tags}}
+				
+					<a href="{{url}}" title="{{name}}" class="tag_fbi"><li>{{name}}</li> </a>
+					
+				{{/foreach}}
+			</ul>
+
+		{{/if}}
+	</article>
+{{/foreach}}

@@ -1,0 +1,20 @@
+{{!< default }}
+<main class="main_fbi" role="main">
+	{{#post}}
+		<article class="{{post_class}}">
+			<header class="page-header_fbi">
+				<h1 class="page-title_fbi">{{title}}</h1>
+			</header>
+		</article>
+	{{/post}}
+	{{#get "posts" include="tags,author"}}
+		{{> loop}}
+		{{#if pagination}}
+			<div class="pagination_fbi">
+				{{pagination}}
+			</div>
+		{{/if}}
+	{{/get}}
+</main>
+
+{{> sidebar}}

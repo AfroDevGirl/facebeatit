@@ -1,0 +1,28 @@
+{{!< default}}
+
+
+<main class="main_fbi" role="main">
+	{{#author}}
+		<header class="author-header_fbi">
+			{{#if image}}
+			<div class="author-image_fbi">
+				<img src="{{image}}" alt="{{name}}'s Picture" />
+			</div>
+			{{/if}}
+		
+			<h1 class="author-title_fbi">{{name}}</h1>
+
+			<div class="author-meta_fbi">
+				{{plural ./pagination.total empty='No posts' singular='% post' plural='% posts'}}
+			</div>
+		</header>
+
+	{{/author}}
+	{{> loop}}
+	<div class="pagination_fbi">
+		{{pagination}}
+	</div>
+</main>
+
+
+{{> sidebar}}

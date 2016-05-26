@@ -1,0 +1,15 @@
+<div class="sidebar-widget_fbi">
+	<h4 class="sidebar-title_fbi">Featured Post</h4>
+	{{#get "posts" limit="1" filter="featured:true"}}
+	    {{#foreach posts}}
+	    	<div class="sidebar-wrapper_fbi">
+	        	{{#if image}}
+	        	<img src="{{image}}" alt="{{title}}">
+	        	{{/if}}
+	        	<h4>{{title}}</h4>
+	        	<p>{{excerpt characters="80"}}</p>
+	        	<a href="/{{slug}}"><div class="button">Read More</div></a>
+	        </div>
+	    {{/foreach}}
+	{{/get}}
+</div>

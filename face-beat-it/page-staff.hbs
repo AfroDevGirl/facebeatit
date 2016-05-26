@@ -1,0 +1,28 @@
+{{!< default}}
+<main class="main_fbi">
+	{{#post}}
+	<article class="{{post_class}}">
+		<header class="page-header_fbi">
+			<h1 class="page-title_fbi">{{title}}</h1>
+		</header>
+	</article>
+	{{/post}}
+	<section class="page-content_fbi">
+		{{#get "users" limit="all"}}
+		<ul class="staff-list_fbi">
+			{{#foreach users}}
+				<li class="staff-list-author_fbi">
+					<div class="author-card_fbi">
+						<img class="author-card-image_fbi" src="{{image}}"/>
+						<h4 class="author-card-name_fbi">{{name}}</h4>
+						<h6 class="author-card-location_fbi">{{location}}</h6>
+						<p class="author-card-bio_fbi">{{bio}}</p>
+						<a href="{{url}}"><div class="button">Read more</div></a>
+					</div>
+				</li>
+			{{/foreach}}
+		</ul>
+		{{/get}}
+	</section>
+</main>
+{{> sidebar}}

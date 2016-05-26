@@ -1,0 +1,17 @@
+<div role='banner' class="header_fbi">
+	{{#if @blog.logo}}
+		<a class="logo_fbi" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+	{{else}}
+		<h1 class="blog-title_fbi">
+			<a title="{{@blog.title}}" href='{{@blog.url}}'>
+				{{{@blog.title}}}
+			</a>
+		</h1>
+		<h4 class="blog-description_fbi">
+			<a title="{{@blog.title}}" href='{{@blog.url}}'>
+				{{@blog.description}}
+			</a>
+		</h4>
+	{{/if}}
+	{{navigation}}
+</div>

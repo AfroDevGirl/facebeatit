@@ -1,0 +1,19 @@
+{{!< default}}
+
+<main class="main_fbi" role="main">
+  {{#tag}}
+
+    <article class="{{post_class}}">
+      <header class="page-header_fbi">
+        <h1 class="page-title_fbi">{{name}}</h1>
+      </header>
+    </article>
+
+  {{/tag}}
+  {{> "loop"}}
+  <div class="pagination_fbi">
+    {{pagination}}
+  </div>
+</main>
+
+{{>sidebar}}
